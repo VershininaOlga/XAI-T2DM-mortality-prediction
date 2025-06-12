@@ -2,12 +2,12 @@
 
 This repository contains the XAI model for predicting the risk (probability) of death in patients with T2DM based on ten variables:
 - Age, years
-- Number of complications (0, 1, 2, 3, 4 or 5), where complications are diabetic neuropathy, diabetic nephropathy, diabetic retinopathy, atherosclerotic vascular disease, major adverse cardiovascular events (MACE)
-- N-terminal prohormone of brain natriuretic peptide (NT-proBNP), ng/L
+- Number of complications (0, 1, 2, 3, 4 or 5), where complications are diabetic neuropathy, diabetic nephropathy, diabetic retinopathy, atherosclerotic vascular disease and major adverse cardiovascular events (MACE)
+- NT-proBNP (N-terminal prohormone of brain natriuretic peptide), ng/L
 - Triglycerides, mg/dL
 - Creatinine, mg/dL
-- High-sensitivity C-reactive protein (hs-CRP), mg/L
-- Red cell distribution width-standard deviation (RDW-SD), fL
+- hs-CRP (high-sensitivity C-reactive protein), mg/L
+- RDW-SD (red cell distribution width-standard deviation), fL
 - Apolipoprotein A1, mg/dL
 - N-glycan NA3F (branching α-1,3-fucosylated triantennary glycan), %
 - Disease duration (duration of T2DM), years
@@ -38,11 +38,10 @@ This repository contains the XAI model for predicting the risk (probability) of 
 
 ### Requirements
 Python 3.11  
-joblib==1.4.2  
-openpyxl==3.1.5  
-numpy==1.26.4  
-pandas==2.2.2  
-matplotlib==3.10.0  
+openpyxl  
+pandas  
+numpy  
+matplotlib  
 scikit-survival==0.23.0  
 shap==0.46.0  
 
@@ -73,7 +72,7 @@ python run_prediction.py --file_name <file_name>
 ```
 where ```<file_name>``` - data file name, eg ```data.xlsx```
 
-Please note that plotting explainability graphs can take a significant amount of time.  
+Please note that plotting explainability graphs for a large dataset can take a significant amount of time.
 
 As a result of running the script, a ```results``` folder will be generated, which will contain  
 - file with a table containing the predicted mortality probability of patients from data file
@@ -82,7 +81,7 @@ As a result of running the script, a ```results``` folder will be generated, whi
 
 ### Interpretation of explainability plots
 ![illustration](image/illustration.png)
-The y-axis displays the variables (features) from bottom to top in ascending order based on their contribution to the prediction. The x-axis shows the 16.8-year mortality probability. The bottom of the graph shows the base probability of the model E[f(X)], from which the prediction begins. Each band of the graph shows how much and in which direction the value of the feature changes the prediction. Blue bands correspond to features whose values ​​decrease the probability of mortality, and red bands correspond to features whose values ​​increase the probability of mortality. The predicted probability of 16.8-year mortality is reflected in f(x).
+The y-axis displays the variables (features) from bottom to top in ascending order based on their contribution to the prediction. The x-axis shows the 16.8-year mortality probability. The bottom of the graph shows the base probability of the model, E[f(X)], from which the prediction begins. Each band of the graph shows how much and in which direction the value of the feature changes the prediction. Blue bands correspond to features whose values ​​decrease the probability of mortality, and red bands correspond to features whose values ​​increase the probability of mortality. The predicted probability of 16.8-year mortality is reflected in f(x).
 
 
 ## Citation
