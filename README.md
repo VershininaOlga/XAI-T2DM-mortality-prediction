@@ -86,8 +86,3 @@ The y-axis displays the variables (features) from bottom to top in ascending ord
 
 ## Citation
 Olga Vershinina, Jacopo Sabbatinelli, Anna Rita Bonfigli, Dalila Colombaretti, Angelica Giuliani, Mikhail Krivonosov, Arseniy Trukhanov, Claudio Franceschi, Mikhail Ivanchenko, Fabiola Olivieri. Explainable artificial intelligence model predicting the risk of all-cause mortality in patients with type 2 diabetes mellitus, 2025.
-
-
-## Acknowledgments
-This work was supported by the Ministry of Economic Development of the Russian Federation (grant No 139-15-2025-004 dated 17.04.2025, agreement identifier 000000С313925P3X0002).
-  
