@@ -42,12 +42,7 @@ class t2dm_model:
 
     def predict(self, X_raw):
         X = self.prepare_data(X_raw)
-        pred_prob = pd.DataFrame({'Patient ID': X.index,
-                                  '5-year mortality probability': self.predict_mortality(X, 1825),
-                                  '10-year mortality probability': self.predict_mortality(X, 3650),
-                                  '15-year mortality probability': self.predict_mortality(X, 5475),
-                                  '16.8-year mortality probability': self.predict_mortality(X, 6142)
-                                 })
+        pred_prob = pd.DataFrame({'Patient ID': X.index, '16.8-year mortality probability': self.predict_mortality(X, 6142)})
         return pred_prob
 
     def plot_local_shap(self, X_raw, dpi=100):
