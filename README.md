@@ -1,6 +1,6 @@
 # XAI-T2DM-mortality-prediction
 
-This repository contains the XAI model for predicting the risk (probability) of death in patients with T2DM based on ten variables:
+This repository contains the XAI model for predicting the 16.8-year risk (probability) of death in patients with T2DM based on ten variables:
 - Age, years
 - Number of complications (0, 1, 2, 3, 4 or 5), where complications are diabetic neuropathy, diabetic nephropathy, diabetic retinopathy, atherosclerotic vascular disease and major adverse cardiovascular events (MACE)
 - NT-proBNP (N-terminal prohormone of brain natriuretic peptide), ng/L
