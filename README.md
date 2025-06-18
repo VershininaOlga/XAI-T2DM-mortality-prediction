@@ -48,7 +48,7 @@ shap==0.46.0
 ### Installing
 ```bash
 # clone project
-git clone https://github.com/VershininaOlga/XAI-T2DM-mortality-prediction
+git clone https://github.com/VershininaOlga/XAI-T2DM-mortality-prediction.git
 cd XAI-T2DM-mortality-prediction
 
 # [OPTIONAL] create environment
